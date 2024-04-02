@@ -7,7 +7,7 @@ CORS(app)
 # CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
 CORS(app, supports_credentials=True, methods=['GET', 'POST', 'OPTIONS'])
 
-@app.route('/text-to-speech', methods=['POST'])
+@app.route('/', methods=['POST'])
 def text_to_speech():
     # Retrieve text from the request body
     data = request.json
