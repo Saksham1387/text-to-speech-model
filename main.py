@@ -34,4 +34,4 @@ def text_to_speech():
             os.remove(filename)
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5004, host='0.0.0.0')
+    app.run(debug=True,port=9090, host='0.0.0.0')
