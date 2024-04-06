@@ -1,1 +1,1 @@
-GOOGLE_ENTRYPOINT="python main.py"
+web: python main.py
