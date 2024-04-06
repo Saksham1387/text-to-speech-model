@@ -1,1 +1,1 @@
-web: gunicorn main:app
+GOOGLE_ENTRYPOINT="python main.py"
