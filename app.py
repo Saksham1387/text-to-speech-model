@@ -4,10 +4,10 @@ import os
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-# CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
+CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
 CORS(app, supports_credentials=True, methods=['GET', 'POST', 'OPTIONS'])
 
-@app.route('/', methods=['POST'])
+@app.route('/speak', methods=['POST'])
 def text_to_speech():
     # Retrieve text from the request body
     data = request.json
@@ -34,4 +34,4 @@ def text_to_speech():
             os.remove(filename)
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5004)
+    app.run(debug=True,port=5004, host='0.0.0.0')
